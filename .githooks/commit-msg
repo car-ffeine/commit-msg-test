@@ -11,8 +11,6 @@ POSTFIX=$(git branch | grep '\*' | sed 's/* //' | sed 's/^.*\///' | sed 's/^\([^
 
 COMMIT_SOURCE=$2
 
-if [ "$COMMIT_SOURCE" != "merge" ]; then
-  if [[ "$MESSAGE" != *"[#$POSTFIX]"* ]]; then
-    printf "%s\n\n[#%s]" "$MESSAGE" "$POSTFIX" > "$COMMIT_MESSAGE_FILE_PATH"
-  fi
+if ["$POSTFIX" != "$(git branch --show-current)"] && [ "$COMMIT_SOURCE" != "merge" ] && [[ "$MESSAGE" != *"[#$POSTFIX]"* ]]; then
+  printf "%s\n\n[#%s]" "$MESSAGE" "$POSTFIX" > "$COMMIT_MESSAGE_FILE_PATH"
 fi
