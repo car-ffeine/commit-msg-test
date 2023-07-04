@@ -12,7 +12,5 @@ curl -L https://github.com/myeongjae-kim/git-conventions-by-hooks/archive/main.t
 ### git clone 후 아래 코드 실행
 
 ```
-git config core.hooksPath .githooks
+make
 ```
-
-..
