@@ -1,4 +1,10 @@
-커밋 메시지 자동 입력 테스트
+# 커밋 메시지 자동 입력 테스트
 
-테스트1
-테스트2
+## hook 설정
+
+```
+curl -L https://github.com/myeongjae-kim/git-conventions-by-hooks/archive/main.tar.gz | tar -xzv \
+  && rsync -axvP git-conventions-by-hooks-main/ ./ \
+  && rm -rf git-conventions-by-hooks-main \
+  && bash setup.sh
+```
