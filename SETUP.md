@@ -1,5 +1,3 @@
-
-
 ## Setup Git Hooks
 
 ```bash
