@@ -14,4 +14,3 @@ curl -L https://github.com/myeongjae-kim/git-conventions-by-hooks/archive/main.t
 ```
 git config core.hooksPath .githooks
 ```
-
